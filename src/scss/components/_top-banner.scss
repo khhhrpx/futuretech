@@ -1,0 +1,45 @@
+@use "../utils/variables" as v;
+@use "../base/typography";
+
+.top-banner {
+  background-color: v.$grey-dark-800;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  &__link {
+    @extend %text-small;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    color: v.$grey-light-700;
+    text-align: center;
+
+    @media (hover: hover) {
+      &:hover {
+        color: v.$white;
+      }
+    }
+
+    @media (width <= 1440px) {
+      font-size: 1.4rem;
+    }
+
+    @media (width <= 480px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__icon {
+    color: v.$accent-color;
+    flex-shrink: 0;
+
+    @media (width <= 1440px) {
+      width: 2rem;
+      aspect-ratio: 1;
+    }
+  }
+}

@@ -1,8 +1,18 @@
+@use "../utils/variables" as v;
+
 html {
   font-size: 10px;
 }
 
 body {
+  font-family: v.$font-main;
   font-size: 1.6rem;
-  color: #000;
+  background-color: v.$grey-dark-600;
+  color: v.$white;
+}
+
+.main-container {
+  width: min(130rem, 100%);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
 }

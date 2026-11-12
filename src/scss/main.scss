@@ -1,5 +1,14 @@
+//utils
 @use "./utils/variables";
 @use "./utils/helpers";
 
+//base
 @use "./base/custom-reset";
 @use "./base/generals";
+
+//components
+@use "./components/icons";
+@use "./components/top-banner";
+
+//layout
+@use "./layout/header";
