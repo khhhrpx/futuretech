@@ -16,6 +16,7 @@
     <title>FutureTech</title>
   </head>
   <body>
+    <div class="overlay"></div>
     <svg width="0" height="0" class="visually-hidden">
       <symbol
         fill="none"
@@ -136,7 +137,7 @@
         ></path>
       </symbol>
     </svg>
-    <div class="top-banner">
+    <section class="top-banner">
       <div class="main-container top-banner__container">
         <a href="#!" class="top-banner__link">
           Subscribe to our Newsletter For New & latest Blogs and Resources
@@ -145,13 +146,13 @@
           </svg>
         </a>
       </div>
-    </div>
+    </section>
     <header class="header">
       <div class="main-container header__container">
         <a href="/" class="header__logo">
           <img src="./src/icons/logo-header.svg" alt="" />
         </a>
-        <div class="menu">
+        <div class="header__menu">
           <nav class="header__nav">
             <a href="#!" class="header__link header__link--active">Home</a>
             <a href="#!" class="header__link">News</a>
@@ -160,7 +161,11 @@
           </nav>
           <button type="button" class="header__btn">Contact Us</button>
         </div>
+        <button type="button" class="burger-btn">
+          <span></span>
+        </button>
       </div>
     </header>
+    <script src="./src/main.js" type="module"></script>
   </body>
 </html>

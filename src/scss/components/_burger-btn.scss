@@ -1,0 +1,52 @@
+@use "../utils/variables" as v;
+
+.burger-btn {
+  --width: 2.6rem;
+  position: relative;
+  display: none;
+  grid-column: 3 / -1;
+  align-items: center;
+  justify-content: center;
+  width: 4.4rem;
+  aspect-ratio: 1;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+
+  @media (hover: hover) {
+    cursor: pointer;
+  }
+
+  @media (width <= 768px) {
+    display: flex;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before,
+  &::after,
+  span {
+    height: 0.2rem;
+    border-radius: 0.1rem;
+    background-color: v.$white;
+  }
+
+  &::before,
+  span {
+    width: var(--width);
+  }
+
+  &::before {
+    top: 1rem;
+  }
+
+  &::after {
+    width: calc(var(--width) / 2);
+    translate: 50%;
+    bottom: 1rem;
+  }
+}
