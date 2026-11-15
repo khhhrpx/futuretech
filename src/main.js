@@ -3,16 +3,18 @@ const burgerBtn = document.querySelector(".burger-btn");
 const overlay = document.querySelector(".overlay");
 
 burgerBtn.addEventListener("click", () => {
-  menu.classList.add("header__menu--active");
-  overlay.classList.add("overlay--active");
+  toggleMenu();
 });
 
 overlay.addEventListener("click", () => {
-  menu.classList.remove("header__menu--active");
-  overlay.classList.remove("overlay--active");
+  toggleMenu(false);
 });
 
 window.addEventListener("resize", () => {
-  menu.classList.remove("header__menu--active");
-  overlay.classList.remove("overlay--active");
+  toggleMenu(false);
 });
+
+function toggleMenu(visible = true) {
+  menu.classList.toggle("header__menu--active", visible);
+  overlay.classList.toggle("overlay--active", visible);
+}

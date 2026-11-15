@@ -1,19 +1,18 @@
 @use "../utils/variables" as v;
 
 .overlay {
-  display: none;
   position: fixed;
   inset: 0;
   pointer-events: none;
   transition: background-color 100ms ease;
   z-index: 1;
+  background-color: rgba(v.$accent-color, 0.2);
+  opacity: 0;
+  visibility: hidden;
 
   &--active {
-    pointer-events: visible;
-    background-color: rgba(v.$accent-color, 0.2);
-  }
-
-  @media (width <= 768px) {
-    display: block;
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
   }
 }

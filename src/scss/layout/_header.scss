@@ -5,7 +5,7 @@
 
   &__container {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr;
     gap: 4rem;
     align-items: center;
     padding-block: 2.4rem;
@@ -25,34 +25,32 @@
   }
 
   &__menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 75%;
-    display: contents;
-    flex-direction: column;
-    row-gap: 1rem;
-    height: 100%;
-    padding: 4rem 2rem;
-    border-right: 0.1rem solid v.$grey-dark-600;
-    translate: -100% 0;
-    background-color: v.$grey-dark-800;
-    overflow-y: auto;
-    z-index: 1;
-    transition-property: opacity, visibility, translate;
-    transition-duration: 200ms;
-    transition-timing-function: ease;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 4rem;
 
     @media (width <= 768px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 75vw;
       display: flex;
-      opacity: 0;
-      visibility: hidden;
+      flex-direction: column;
+      row-gap: 1rem;
+      height: 100%;
+      padding: 4rem 2rem;
+      border-right: 0.1rem solid v.$grey-dark-600;
+      translate: -100% 0;
+      background-color: v.$grey-dark-800;
+      overflow-y: auto;
+      z-index: 1;
+      transition-property: translate;
+      transition-duration: 200ms;
+      transition-timing-function: ease;
     }
   }
 
   &__menu--active {
-    opacity: 1;
-    visibility: visible;
     translate: 0;
   }
 
@@ -77,7 +75,12 @@
     );
 
     @media (width <= 768px) {
-      display: contents;
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+      mask-image: none;
+      padding-inline: 0;
+      margin-left: 0;
     }
   }
 
@@ -121,11 +124,17 @@
     padding: 1.4rem 2rem;
     color: v.$grey-dark-800;
     background-color: v.$accent-color;
-    border: none;
+    border: 0.1rem solid transparent;
     border-radius: 1rem;
 
     @media (hover: hover) {
       cursor: pointer;
+
+      &:hover {
+        border-color: v.$accent-color;
+        color: v.$accent-color;
+        background-color: transparent;
+      }
     }
 
     @media (width <= 1440px) {
