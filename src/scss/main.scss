@@ -1,6 +1,7 @@
 //utils
 @use "./utils/variables";
 @use "./utils/helpers";
+@use "./utils/placeholders";
 
 //base
 @use "./base/custom-reset";
@@ -11,6 +12,8 @@
 @use "./components/top-banner";
 @use "./components/burger-btn";
 @use "./components/overlay";
+@use "./components/user-group";
+@use "./components/info-cards";
 
 //layout
 @use "./layout/header";

@@ -1,4 +1,5 @@
 @use "../utils/variables" as v;
+@use "../utils/placeholders";
 
 .header {
   border-block: 0.1rem solid v.$grey-dark-600;
@@ -105,6 +106,7 @@
   }
 
   &__btn {
+    @extend %hover-shadow;
     display: flex;
     justify-content: center;
     align-items: center;

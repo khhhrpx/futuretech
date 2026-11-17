@@ -17,3 +17,5 @@ body {
   margin-inline: auto;
   padding-inline: 3rem;
 }
+
+// padding-inline: calc((100vw - min(128rem, 100vw)) / 2); считаем контейнер

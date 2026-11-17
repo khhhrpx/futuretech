@@ -5,7 +5,7 @@
 
   &__container {
     display: grid;
-    grid-template-columns: 59.1401% 1fr;
+    grid-template-columns: 59.1401% minmax(0, 1fr);
   }
 
   &__content {
@@ -121,6 +121,8 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
+    align-items: start;
+    row-gap: 2rem;
 
     &::before {
       content: "";
@@ -129,10 +131,15 @@
       background-image: url("../../icons/decor.svg");
       background-repeat: no-repeat;
       background-size: contain;
-      mix-blend-mode: screen;
       opacity: 0.3;
       z-index: -1;
     }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.6rem;
   }
 
   &__info-title {
@@ -148,5 +155,43 @@
     line-height: 1.5;
     letter-spacing: -0.03em;
   }
+
+  &__link {
+    font-size: 1.4rem;
+    letter-spacing: -0.03em;
+    display: flex;
+    align-items: center;
+    column-gap: 0.4rem;
+    padding: 1.4rem 2rem;
+    color: v.$grey-light-700;
+    border: 0.1rem solid v.$grey-dark-600;
+    border-radius: 0.8rem;
+    max-width: 100%;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: v.$accent-color;
+        color: v.$grey-dark-800;
+
+        svg {
+          color: v.$grey-dark-800;
+        }
+      }
+    }
+
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    svg {
+      color: v.$accent-color;
+      flex-shrink: 0;
+    }
+  }
+
+  &__inner {
+    border-top: 0.1rem solid v.$grey-dark-600;
+  }
 }
-// padding-inline: calc((100vw - min(128rem, 100vw)) / 2); считаем контейг
