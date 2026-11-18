@@ -83,7 +83,6 @@
 
   &__link {
     font-size: 1.4rem;
-    line-height: 1.5;
     color: v.$grey-light-800;
     padding: 1rem 1.8rem;
     border: 0.1rem solid transparent;
@@ -113,12 +112,12 @@
     font-weight: 500;
     font-family: v.$font-main;
     font-size: 1.4rem;
-    line-height: 1.5;
     padding: 1rem 1.4rem;
     color: v.$grey-dark-800;
     background-color: v.$accent-color;
     border: 0.1rem solid transparent;
     border-radius: 1rem;
+    white-space: nowrap;
 
     @media (hover: hover) {
       cursor: pointer;

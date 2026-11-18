@@ -28,7 +28,6 @@
     font-family: v.$font-secondary;
     font-weight: 500;
     line-height: 1.2;
-    letter-spacing: -0.03em;
   }
 
   &__suptitle {
@@ -39,14 +38,11 @@
 
   &__title {
     font-size: 5.5rem;
-    color: v.$white;
     text-wrap-style: balance;
   }
 
   &__text {
     font-size: 1.6rem;
-    line-height: 1.5;
-    letter-spacing: -0.03em;
     color: v.$grey-light-800;
   }
 
@@ -97,8 +93,6 @@
 
   &__card-title {
     font-size: 3rem;
-    line-height: 1.5;
-    letter-spacing: -0.03em;
     font-weight: 600;
 
     span {
@@ -108,8 +102,6 @@
 
   &__card-text {
     font-size: 1.4rem;
-    line-height: 1.5;
-    letter-spacing: -0.03em;
     color: v.$grey-light-800;
   }
 
@@ -145,20 +137,15 @@
   &__info-title {
     font-size: 2rem;
     font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: -0.03em;
   }
 
   &__info-text {
     color: v.$grey-light-700;
     font-size: 1.6rem;
-    line-height: 1.5;
-    letter-spacing: -0.03em;
   }
 
   &__link {
     font-size: 1.4rem;
-    letter-spacing: -0.03em;
     display: flex;
     align-items: center;
     column-gap: 0.4rem;

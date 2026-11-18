@@ -48,16 +48,9 @@
     row-gap: 0.2rem;
   }
 
-  &__title,
-  &__subtitle {
-    line-height: 1.5;
-    letter-spacing: -0.03em;
-  }
-
   &__title {
     font-size: 1.8rem;
     font-weight: 500;
-    color: v.$white;
   }
 
   &__subtitle,

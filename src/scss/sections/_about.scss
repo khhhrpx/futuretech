@@ -1,0 +1,77 @@
+@use "../utils/variables" as v;
+
+.about {
+  background-color: v.$grey-dark-800;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 32.2656% 1fr;
+    column-gap: 6rem;
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    overflow-wrap: break-word;
+    align-self: center;
+    padding-block: 6rem;
+
+    img {
+      display: block;
+      width: 6rem;
+      aspect-ratio: 1;
+      object-fit: contain;
+    }
+  }
+
+  &__text-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: v.$font-secondary;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    color: v.$grey-light-700;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    padding-block: 6rem;
+    padding-left: 6rem;
+    box-shadow: -0.1rem 0 0 v.$grey-dark-600;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+    border-radius: 1rem;
+    padding: 3rem;
+    background-color: v.$grey-dark-700;
+    overflow-wrap: break-word;
+  }
+
+  &__card-title {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  &__card-text {
+    font-size: 1.6rem;
+    color: v.$grey-light-700;
+  }
+
+  &__inner {
+    border-top: 0.1rem solid v.$grey-dark-600;
+  }
+}

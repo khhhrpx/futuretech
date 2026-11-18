@@ -14,9 +14,11 @@
 @use "./components/overlay";
 @use "./components/user-group";
 @use "./components/info-cards";
+@use "./components/section-header";
 
 //layout
 @use "./layout/header";
 
 //sections
 @use "./sections/hero";
+@use "./sections/about";
