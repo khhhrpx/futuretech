@@ -9,12 +9,14 @@
 
 //components
 @use "./components/icons";
+@use "./components/main-link";
 @use "./components/top-banner";
 @use "./components/burger-btn";
 @use "./components/overlay";
 @use "./components/user-group";
 @use "./components/info-cards";
 @use "./components/section-header";
+@use "./components/author-card";
 
 //layout
 @use "./layout/header";
@@ -22,3 +24,5 @@
 //sections
 @use "./sections/hero";
 @use "./sections/about";
+@use "./sections/blog";
+@use "./sections/resources";

@@ -1,0 +1,38 @@
+@use "../utils/variables" as v;
+
+.main-link {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  column-gap: 0.4rem;
+  padding: 1.4rem 2rem;
+  color: v.$grey-light-700;
+  border: 0.1rem solid v.$grey-dark-600;
+  border-radius: 0.8rem;
+  background-color: v.$grey-dark-800;
+
+  span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  svg {
+    flex-shrink: 0;
+    color: v.$accent-color;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: v.$accent-color;
+      color: v.$grey-dark-800;
+
+      svg {
+        color: v.$grey-dark-800;
+      }
+    }
+  }
+}

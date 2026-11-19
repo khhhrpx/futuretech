@@ -144,40 +144,6 @@
     font-size: 1.6rem;
   }
 
-  &__link {
-    font-size: 1.4rem;
-    display: flex;
-    align-items: center;
-    column-gap: 0.4rem;
-    padding: 1.4rem 2rem;
-    color: v.$grey-light-700;
-    border: 0.1rem solid v.$grey-dark-600;
-    border-radius: 0.8rem;
-    max-width: 100%;
-
-    @media (hover: hover) {
-      &:hover {
-        background-color: v.$accent-color;
-        color: v.$grey-dark-800;
-
-        svg {
-          color: v.$grey-dark-800;
-        }
-      }
-    }
-
-    span {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    svg {
-      color: v.$accent-color;
-      flex-shrink: 0;
-    }
-  }
-
   &__inner {
     border-top: 0.1rem solid v.$grey-dark-600;
   }

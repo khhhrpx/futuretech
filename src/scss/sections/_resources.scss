@@ -1,0 +1,84 @@
+@use "../utils/variables" as v;
+
+.resources {
+  background-color: v.$grey-dark-800;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 32.2656% minmax(0, 1fr);
+    column-gap: 6rem;
+  }
+
+  &__intro,
+  &__content {
+    padding-block: 6rem;
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 3rem;
+  }
+
+  &__img {
+    display: block;
+    width: 6rem;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+
+  &__text-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: v.$font-secondary;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    color: v.$grey-light-700;
+  }
+
+  &__link {
+    background-color: v.$grey-dark-700;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    border-radius: 0.8rem;
+    background-color: v.$grey-dark-700;
+    padding: 2rem;
+  }
+
+  &__info-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.2rem;
+  }
+
+  &__info-text {
+    font-size: 1.4rem;
+    color: v.$grey-light-700;
+  }
+
+  &__info-title {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  &__content {
+    padding-left: 6rem;
+    border-left: 0.1rem solid v.$grey-dark-600;
+  }
+}
