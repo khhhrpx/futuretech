@@ -17,6 +17,8 @@
 @use "./components/info-cards";
 @use "./components/section-header";
 @use "./components/author-card";
+@use "./components/framed-box";
+@use "./components/review-card";
 
 //layout
 @use "./layout/header";
@@ -26,3 +28,4 @@
 @use "./sections/about";
 @use "./sections/blog";
 @use "./sections/resources";
+@use "./sections/reviews";

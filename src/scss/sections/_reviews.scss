@@ -1,0 +1,38 @@
+@use "../utils/variables" as v;
+
+.reviews {
+  background-color: v.$grey-dark-800;
+
+  &__inner {
+    &:not(:last-child) {
+      border-bottom: 0.1rem solid v.$grey-dark-600;
+    }
+  }
+
+  &__container {
+    display: flex;
+    column-gap: 4rem;
+  }
+
+  &__card {
+    position: relative;
+    flex-basis: calc((100% - 8rem) / 3);
+    padding-block: 6rem;
+    flex-grow: 1;
+
+    &:not(:last-child) {
+      padding-right: 4rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 0.1rem;
+        translate: 50%;
+        background-color: v.$grey-dark-600;
+      }
+    }
+  }
+}

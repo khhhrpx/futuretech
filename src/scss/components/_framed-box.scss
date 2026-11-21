@@ -1,0 +1,12 @@
+@use "../utils/variables" as v;
+
+.framed-box {
+  border: 0.1rem solid v.$grey-dark-600;
+  border-radius: 0.8rem;
+  background-color: v.$grey-dark-700;
+  padding: 2rem;
+
+  &--large {
+    padding: 2.4rem;
+  }
+}

@@ -1,12 +1,20 @@
 @use "../utils/variables" as v;
+@use "../utils/placeholders";
 
 .resources {
   background-color: v.$grey-dark-800;
+
+  &__inner {
+    &:not(:last-child) {
+      border-bottom: 0.1rem solid v.$grey-dark-600;
+    }
+  }
 
   &__container {
     display: grid;
     grid-template-columns: 32.2656% minmax(0, 1fr);
     column-gap: 6rem;
+    align-items: center;
   }
 
   &__intro,
@@ -56,9 +64,6 @@
     align-items: center;
     gap: 3rem;
     flex-wrap: wrap;
-    border-radius: 0.8rem;
-    background-color: v.$grey-dark-700;
-    padding: 2rem;
   }
 
   &__info-group {
@@ -78,7 +83,99 @@
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
     padding-left: 6rem;
     border-left: 0.1rem solid v.$grey-dark-600;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    column-gap: 1.6rem;
+  }
+
+  &__content-title {
+    font-size: 2rem;
+    font-weight: 600;
+    flex-basis: 27.1753%;
+    flex-shrink: 0;
+  }
+
+  &__media {
+    border-radius: 1rem;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: 25.1673% 1fr;
+    column-gap: 1.6rem;
+    row-gap: 2.4rem;
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.2rem;
+
+    &:nth-child(3) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__bottom-title {
+    font-size: 1.8rerem;
+    font-weight: 600;
+  }
+
+  &__bottom-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    column-gap: 0.4rem;
+    color: v.$grey-light-700;
+    padding: 1.4rem 2rem;
+    background-color: v.$grey-dark-800;
+    border: 0.1rem solid v.$grey-dark-600;
+    border-radius: 0.8rem;
+    max-width: 25rem;
+
+    span {
+      @extend %text-ellipsis;
+    }
+
+    svg {
+      flex-shrink: 0;
+      color: v.$accent-color;
+    }
+
+    @media (hover: hover) {
+      cursor: pointer;
+
+      &:hover {
+        background-color: v.$accent-color;
+        color: v.$grey-dark-800;
+
+        svg {
+          color: v.$grey-dark-800;
+        }
+      }
+    }
   }
 }

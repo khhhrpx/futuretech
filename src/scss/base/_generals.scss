@@ -20,4 +20,8 @@ body {
   padding-inline: 3rem;
 }
 
+button {
+  font-family: inherit;
+}
+
 // padding-inline: calc((100vw - min(128rem, 100vw)) / 2); считаем контейнер
