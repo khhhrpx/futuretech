@@ -1,0 +1,65 @@
+@use "../utils/variables" as v;
+
+.post {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+
+  &__date {
+    font-size: 1.8rem;
+    color: v.$grey-light-700;
+    font-weight: 600;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.6rem;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    --icon-color: #{v.$grey-dark-100};
+    display: flex;
+    align-items: center;
+    column-gap: 0.2rem;
+    height: 3.4rem;
+    padding-inline: 1.2rem;
+    border: 0.1rem solid v.$grey-dark-600;
+    border-radius: 1.7rem;
+    background-color: v.$grey-dark-700;
+    color: v.$grey-light-700;
+
+    svg {
+      flex-shrink: 0;
+      color: var(--icon-color);
+    }
+
+    @media (hover: hover) {
+      cursor: pointer;
+
+      &:hover {
+        background-color: v.$accent-color;
+        color: v.$black;
+        --icon-color: #{v.$black};
+      }
+    }
+
+    &--red {
+      svg {
+        color: v.$red;
+      }
+    }
+  }
+}

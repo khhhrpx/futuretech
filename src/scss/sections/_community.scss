@@ -1,0 +1,70 @@
+@use "../utils/variables" as v;
+
+.community {
+  padding-block: 8rem;
+  border-block: 0.1rem solid v.$grey-dark-600;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    column-gap: 6rem;
+  }
+
+  &__col {
+    &--media {
+      flex-shrink: 0;
+    }
+  }
+
+  &__img {
+    width: 12rem;
+    aspect-ratio: 1;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 1rem;
+  }
+
+  &__badge {
+    font-size: 1.6rem;
+    background-color: v.$grey-dark-500;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+  }
+
+  &__title {
+    font-size: 4.4rem;
+    font-weight: 500;
+    font-family: v.$font-secondary;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    color: v.$grey-light-800;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: v.$grey-dark-800;
+    border: 0.1rem solid v.$grey-dark-600;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  &__cell {
+    flex-basis: calc((100% - 2rem) / 3);
+    flex-grow: 1;
+  }
+}

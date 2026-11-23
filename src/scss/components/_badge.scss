@@ -1,0 +1,11 @@
+@use "../utils/variables" as v;
+
+.badge {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  background-color: v.$grey-dark-500;
+  color: v.$white;
+  border-radius: 0.4rem;
+  width: fit-content;
+}

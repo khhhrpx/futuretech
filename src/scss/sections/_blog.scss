@@ -4,138 +4,16 @@
 .blog {
   background-color: v.$grey-dark-800;
 
-  &__inner {
-    &:not(:last-child) {
-      border-bottom: 0.1rem solid v.$grey-dark-600;
-    }
-  }
-
-  &__filters {
-    display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 1.4rem;
-    padding-block: 4rem;
-  }
-
-  &__filter-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 0.1rem solid v.$grey-dark-600;
-    border-radius: 0.7rem;
-    padding: 2rem 2.4rem;
-    background-color: v.$grey-dark-800;
-    color: v.$grey-light-700;
-
-    span {
-      @extend %text-ellipsis;
-    }
-
-    @media (hover: hover) {
-      cursor: pointer;
-
-      &:hover {
-        background-color: v.$accent-color;
-        color: v.$grey-dark-800;
-      }
-    }
-  }
-
-  &__filter-btn--active {
-    color: v.$white;
-    background-color: v.$grey-dark-700;
-    cursor: default;
-    pointer-events: none;
-  }
-
   &__container {
     display: grid;
-    grid-template-columns: 23.8281% minmax(0, 1fr);
+    grid-template-columns: 23.8281% minmax(0, 1fr) auto;
     column-gap: 4rem;
     padding-block: 6rem;
   }
 
   &__cell {
-    &:nth-child(2) {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      align-items: center;
-      column-gap: 4rem;
+    &--center {
+      align-self: center;
     }
-  }
-
-  &__content,
-  &__text-group {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__content {
-    row-gap: 2.4rem;
-  }
-
-  &__date {
-    font-size: 1.8rem;
-    color: v.$grey-light-700;
-    font-weight: 600;
-  }
-
-  &__text-group {
-    row-gap: 0.6rem;
-  }
-
-  &__title {
-    font-size: 2.2rem;
-    font-weight: 600;
-  }
-
-  &__text {
-    font-size: 1.6rem;
-    color: v.$grey-light-700;
-  }
-
-  &__actions {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-  }
-
-  &__action-btn {
-    --icon-color: #{v.$grey-dark-100};
-    display: flex;
-    align-items: center;
-    column-gap: 0.2rem;
-    height: 3.4rem;
-    padding-inline: 1.2rem;
-    border: 0.1rem solid v.$grey-dark-600;
-    border-radius: 1.7rem;
-    background-color: v.$grey-dark-700;
-    color: v.$grey-light-700;
-
-    svg {
-      flex-shrink: 0;
-      color: var(--icon-color);
-    }
-
-    @media (hover: hover) {
-      cursor: pointer;
-
-      &:hover {
-        background-color: v.$accent-color;
-        color: v.$black;
-        --icon-color: #{v.$black};
-      }
-    }
-  }
-
-  &__action-btn--like {
-    svg {
-      color: v.$red;
-    }
-  }
-
-  &__link {
-    max-width: 25rem;
   }
 }

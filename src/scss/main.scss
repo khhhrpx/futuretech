@@ -8,6 +8,9 @@
 @use "./base/generals";
 
 //components
+@use "./components/main-title";
+@use "./components/main-text";
+@use "./components/separator";
 @use "./components/icons";
 @use "./components/main-link";
 @use "./components/top-banner";
@@ -17,11 +20,17 @@
 @use "./components/info-cards";
 @use "./components/section-header";
 @use "./components/author-card";
+@use "./components/tab-bar";
 @use "./components/framed-box";
 @use "./components/review-card";
+@use "./components/feature-card";
+@use "./components/badge";
+@use "./components/list";
+@use "./components/post";
 
 //layout
 @use "./layout/header";
+@use "./layout/footer";
 
 //sections
 @use "./sections/hero";
@@ -29,3 +38,4 @@
 @use "./sections/blog";
 @use "./sections/resources";
 @use "./sections/reviews";
+@use "./sections/community";

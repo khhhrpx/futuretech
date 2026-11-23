@@ -1,0 +1,44 @@
+@use "../utils/variables" as v;
+@use "../utils/placeholders";
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+  background-color: v.$grey-dark-700;
+  border: 0.1rem solid v.$grey-dark-600;
+  border-radius: 1rem;
+  padding: 3rem;
+
+  &__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1.6rem;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  &__link {
+    @extend %hover-shadow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 4.4rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: v.$accent-color;
+    color: v.$grey-dark-800;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: transparent;
+        color: v.$accent-color;
+      }
+    }
+  }
+}

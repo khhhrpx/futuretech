@@ -1,0 +1,40 @@
+@use "../utils/variables" as v;
+@use "../utils/placeholders";
+
+.tab-bar {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.4rem;
+  padding-block: 4rem;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem solid v.$grey-dark-600;
+    border-radius: 0.7rem;
+    padding: 2rem 2.4rem;
+    background-color: v.$grey-dark-800;
+    color: v.$grey-light-700;
+
+    span {
+      @extend %text-ellipsis;
+    }
+
+    @media (hover: hover) {
+      cursor: pointer;
+
+      &:hover {
+        background-color: v.$accent-color;
+        color: v.$grey-dark-800;
+      }
+    }
+
+    &--active {
+      color: v.$white;
+      background-color: v.$grey-dark-700;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+}
