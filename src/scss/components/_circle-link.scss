@@ -1,0 +1,24 @@
+@use "../utils/variables" as v;
+@use "../utils/placeholders";
+
+.circle-link {
+  @extend %hover-shadow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: v.$accent-color;
+  color: v.$grey-dark-800;
+  flex-shrink: 0;
+  border: 0.1rem solid transparent;
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: v.$accent-color;
+      color: v.$accent-color;
+      background-color: v.$grey-dark-800;
+    }
+  }
+}

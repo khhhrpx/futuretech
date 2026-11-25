@@ -10,6 +10,7 @@
 //components
 @use "./components/main-title";
 @use "./components/main-text";
+@use "./components/stat-card";
 @use "./components/separator";
 @use "./components/icons";
 @use "./components/main-link";
@@ -17,7 +18,7 @@
 @use "./components/burger-btn";
 @use "./components/overlay";
 @use "./components/user-group";
-@use "./components/info-cards";
+@use "./components/info-card";
 @use "./components/section-header";
 @use "./components/author-card";
 @use "./components/tab-bar";
@@ -27,6 +28,7 @@
 @use "./components/badge";
 @use "./components/list";
 @use "./components/post";
+@use "./components/circle-link";
 
 //layout
 @use "./layout/header";

@@ -19,6 +19,10 @@
   &__col {
     &--media {
       flex-shrink: 0;
+
+      &:empty {
+        background-color: rebeccapurple;
+      }
     }
   }
 

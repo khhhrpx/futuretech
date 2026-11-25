@@ -6,21 +6,41 @@
   &__container {
     display: grid;
     grid-template-columns: 59.1401% minmax(0, 1fr);
+
+    @media (width < 1024px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__col {
+    @media (width < 1024px) {
+      margin-inline: -3rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10rem;
+    border-right: 0.1rem solid v.$grey-dark-600;
+
+    @media (width < 1024px) {
+      row-gap: 5rem;
+      border: none;
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
-    row-gap: 10rem;
-    border-right: 0.1rem solid v.$grey-dark-600;
-  }
-
-  &__top {
-    display: flex;
-    flex-direction: column;
     row-gap: 1.4rem;
     padding-top: 10rem;
     padding-right: 4rem;
+
+    @media (width < 1024px) {
+      padding-top: 5rem;
+      padding-inline: 3rem;
+    }
   }
 
   &__suptitle,
@@ -31,25 +51,20 @@
   }
 
   &__suptitle {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, calc(2vw + 1rem), 2.2rem);
     color: v.$grey-dark-100;
     margin-bottom: 0.6rem;
   }
 
   &__title {
-    font-size: 5.5rem;
+    font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
     text-wrap-style: balance;
   }
 
-  &__text {
-    font-size: 1.6rem;
-    color: v.$grey-light-800;
-  }
-
-  &__bottom {
+  &__grid {
     position: relative;
     display: flex;
-    column-gap: 8rem;
+    isolation: isolate;
 
     &::before {
       content: "";
@@ -61,48 +76,27 @@
       background-color: v.$grey-dark-600;
       z-index: 1;
     }
+
+    @media (width < 1024px) {
+      padding-inline: 3rem;
+    }
   }
 
-  &__card {
-    position: relative;
-    flex-grow: 1;
-    flex-basis: calc((100% - 16rem) / 3);
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
+  &__cell {
     padding-block: 3rem;
+    flex: 1 0 0;
 
-    &:not(:last-child) {
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: -4rem;
-        width: 0.1rem;
-        background-color: v.$grey-dark-600;
-        translate: 50%;
-      }
+    &:first-child {
+      padding-right: 4rem;
     }
 
     &:last-child {
-      padding-right: 4rem;
+      padding-left: 4rem;
     }
-  }
 
-  &__card-title {
-    font-size: 3rem;
-    font-weight: 600;
-
-    span {
-      color: v.$accent-color;
+    &:not(:first-child, :last-child) {
+      padding-inline: 4rem;
     }
-  }
-
-  &__card-text {
-    font-size: 1.4rem;
-    color: v.$grey-light-800;
   }
 
   &__info {
@@ -146,5 +140,31 @@
 
   &__inner {
     border-top: 0.1rem solid v.$grey-dark-600;
+  }
+
+  &__cards {
+    display: flex;
+  }
+
+  &__item {
+    --padding: 5rem;
+    flex: 1 0 0;
+    padding-block: 4rem;
+
+    &:first-child {
+      padding-right: var(--padding);
+    }
+
+    &:last-child {
+      padding-left: var(--padding);
+    }
+
+    &:not(:first-child, :last-child) {
+      padding-inline: var(--padding);
+    }
+
+    @media (width < 1024px) {
+      --padding: 3rem;
+    }
   }
 }

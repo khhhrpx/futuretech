@@ -1,0 +1,42 @@
+@use "../utils/variables" as v;
+@use "../utils/placeholders";
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+
+  img {
+    display: block;
+    width: 4rem;
+    object-fit: contain;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1.4rem;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.2rem;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  &__subtitle,
+  &__text {
+    font-size: clamp(1.4rem, calc(1vw + 1rem), 1.6rem);
+    color: v.$grey-light-800;
+  }
+
+  &__text {
+    font-family: v.$font-secondary;
+  }
+}

@@ -28,8 +28,8 @@
     grid-template-columns: 1fr auto;
     column-gap: 4rem;
 
-    @media (width <= 768px) {
-      position: absolute;
+    @media (width < 768px) {
+      position: fixed;
       top: 0;
       left: 0;
       width: 75vw;
@@ -73,7 +73,7 @@
       transparent
     );
 
-    @media (width <= 768px) {
+    @media (width < 768px) {
       flex-direction: column;
       align-items: stretch;
       text-align: center;
@@ -117,7 +117,6 @@
     background-color: v.$accent-color;
     border: 0.1rem solid transparent;
     border-radius: 1rem;
-    max-width: 40rem;
 
     span {
       @extend %text-ellipsis;

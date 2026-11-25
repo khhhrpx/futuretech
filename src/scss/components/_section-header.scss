@@ -5,19 +5,25 @@
   padding-block: 8rem;
   background-color: v.$grey-dark-700;
 
+  @media (width < 1024px) {
+    padding-block: 4rem;
+  }
+
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     column-gap: 20rem;
+
+    @media (width < 1024px) {
+      column-gap: 10rem;
+    }
   }
 
-  &__cell {
-    &--content {
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      row-gap: 1rem;
-    }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 1rem;
   }
 }

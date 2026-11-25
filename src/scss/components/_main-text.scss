@@ -1,6 +1,6 @@
 @use "../utils/variables" as v;
 
 .main-text {
-  font-size: 1.6rem;
+  font-size: clamp(1.4rem, calc(1vw + 1rem), 1.6rem);
   color: v.$grey-light-700;
 }

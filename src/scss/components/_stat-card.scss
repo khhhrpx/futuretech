@@ -1,0 +1,21 @@
+@use "../utils/variables" as v;
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 600;
+
+    span {
+      color: v.$accent-color;
+    }
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    color: v.$grey-light-800;
+  }
+}

@@ -5,8 +5,7 @@
 
   &__container {
     display: grid;
-    grid-template-columns: 32.2656% 1fr;
-    column-gap: 6rem;
+    grid-template-columns: 32.2656% minmax(0, 1fr);
   }
 
   &__intro {
@@ -14,7 +13,6 @@
     flex-direction: column;
     row-gap: 4rem;
     align-self: center;
-    padding-block: 6rem;
 
     img {
       display: block;
@@ -45,9 +43,23 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
-    padding-block: 6rem;
-    padding-left: 6rem;
-    box-shadow: -0.1rem 0 0 v.$grey-dark-600;
+  }
+
+  &__col {
+    --padding: 6rem;
+    padding-block: var(--padding);
+
+    &:first-child {
+      padding-right: var(--padding);
+    }
+
+    &:last-child {
+      padding-left: var(--padding);
+    }
+
+    @media (width < 1024px) {
+      --padding: 3rem;
+    }
   }
 
   &__card {
@@ -57,7 +69,7 @@
     border-radius: 1rem;
     padding: 3rem;
     background-color: v.$grey-dark-700;
-    // overflow-wrap: break-word;
+    height: 100%;
   }
 
   &__card-title {
@@ -68,9 +80,5 @@
   &__card-text {
     font-size: 1.6rem;
     color: v.$grey-light-700;
-  }
-
-  &__inner {
-    border-top: 0.1rem solid v.$grey-dark-600;
   }
 }

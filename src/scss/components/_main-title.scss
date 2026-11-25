@@ -1,7 +1,7 @@
 @use "../utils/variables" as v;
 
 .main-title {
-  font-size: 4.4rem;
+  font-size: clamp(2.8rem, calc(3vw + 1rem), 4.4rem);
   font-weight: 500;
   font-family: v.$font-secondary;
   line-height: 1.3;

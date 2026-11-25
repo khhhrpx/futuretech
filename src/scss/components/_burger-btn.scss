@@ -17,7 +17,7 @@
     cursor: pointer;
   }
 
-  @media (width <= 768px) {
+  @media (width < 768px) {
     display: flex;
   }
 

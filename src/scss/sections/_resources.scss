@@ -4,22 +4,31 @@
 .resources {
   background-color: v.$grey-dark-800;
 
-  &__inner {
-    &:not(:last-child) {
-      border-bottom: 0.1rem solid v.$grey-dark-600;
-    }
-  }
-
   &__container {
     display: grid;
     grid-template-columns: 32.2656% minmax(0, 1fr);
-    column-gap: 6rem;
-    align-items: center;
   }
 
-  &__intro,
-  &__content {
-    padding-block: 6rem;
+  &__col {
+    --padding: 6rem;
+    padding-block: var(--padding);
+
+    &:first-child {
+      padding-right: var(--padding);
+    }
+
+    &:last-child {
+      padding-left: var(--padding);
+      box-shadow: -0.1rem 0 0 0 v.$grey-dark-600;
+    }
+
+    &--center {
+      align-self: center;
+    }
+
+    @media (width < 1024px) {
+      --padding: 3rem;
+    }
   }
 
   &__intro {
@@ -86,8 +95,6 @@
     display: flex;
     flex-direction: column;
     row-gap: 2.4rem;
-    padding-left: 6rem;
-    border-left: 0.1rem solid v.$grey-dark-600;
   }
 
   &__header {
@@ -97,7 +104,7 @@
   }
 
   &__content-title {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, calc(1vw + 1rem), 2rem);
     font-weight: 600;
     flex-basis: 27.1753%;
     flex-shrink: 0;
