@@ -33,9 +33,4 @@
     font-size: clamp(1.4rem, calc(1vw + 1rem), 1.8rem);
     font-weight: 600;
   }
-
-  &__text {
-    font-size: 1.6rem;
-    color: v.$grey-light-700;
-  }
 }

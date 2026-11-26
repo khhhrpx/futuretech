@@ -15,6 +15,14 @@
 
   @media (hover: hover) {
     cursor: pointer;
+
+    &:hover {
+      span,
+      &::before,
+      &::after {
+        background-color: v.$accent-color;
+      }
+    }
   }
 
   @media (width < 768px) {

@@ -7,7 +7,7 @@
 
   &__date {
     font-size: clamp(1.6rem, calc(1vw + 1rem), 1.8rem);
-    color: v.$grey-light-700;
+    color: v.$grey-light-400;
     font-weight: 600;
   }
 
@@ -30,7 +30,7 @@
   }
 
   &__btn {
-    --icon-color: #{v.$grey-dark-100};
+    --icon-color: #{v.$grey-dark-400};
     display: flex;
     align-items: center;
     column-gap: 0.2rem;
@@ -39,7 +39,7 @@
     border: 0.1rem solid v.$grey-dark-600;
     border-radius: 1.7rem;
     background-color: v.$grey-dark-700;
-    color: v.$grey-light-700;
+    color: v.$grey-light-400;
 
     svg {
       flex-shrink: 0;

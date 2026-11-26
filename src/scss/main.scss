@@ -8,6 +8,7 @@
 @use "./base/generals";
 
 //components
+@use "./components/main-container";
 @use "./components/main-title";
 @use "./components/main-text";
 @use "./components/stat-card";
@@ -22,7 +23,6 @@
 @use "./components/section-header";
 @use "./components/author-card";
 @use "./components/tab-bar";
-@use "./components/framed-box";
 @use "./components/review-card";
 @use "./components/feature-card";
 @use "./components/badge";

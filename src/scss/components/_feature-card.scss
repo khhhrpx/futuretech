@@ -11,6 +11,11 @@
   padding: 3rem;
   height: 100%;
 
+  @media (width < 768px) {
+    padding: 2.4rem;
+    row-gap: 1rem;
+  }
+
   &__group {
     display: flex;
     align-items: center;

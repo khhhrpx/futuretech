@@ -5,18 +5,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // width: fit-content;
   max-width: 100%;
   column-gap: 0.4rem;
   padding: 1.4rem 2rem;
-  color: v.$grey-light-700;
+  color: v.$grey-light-400;
   border: 0.1rem solid v.$grey-dark-600;
   border-radius: 0.8rem;
   background-color: v.$grey-dark-800;
 
   span {
-    text-overflow: ellipsis;
-    overflow: hidden;
     white-space: nowrap;
   }
 

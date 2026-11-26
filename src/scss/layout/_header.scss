@@ -3,6 +3,7 @@
 
 .header {
   border-block: 0.1rem solid v.$grey-dark-600;
+  background-color: v.$grey-dark-700;
 
   &__container {
     display: grid;
@@ -85,7 +86,7 @@
 
   &__link {
     font-size: 1.4rem;
-    color: v.$grey-light-800;
+    color: v.$grey-light-700;
     padding: 1rem 1.8rem;
     border: 0.1rem solid transparent;
     border-radius: 1rem;

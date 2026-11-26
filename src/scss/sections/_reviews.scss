@@ -5,6 +5,11 @@
 
   &__container {
     display: flex;
+
+    @media (width < 768px) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
   }
 
   &__cell {
@@ -21,6 +26,36 @@
 
     &:not(:first-child, :last-child) {
       padding-inline: 4rem;
+    }
+
+    @media (width < 1024px) {
+      padding-block: 4rem;
+
+      &:first-child {
+        padding-right: 2rem;
+      }
+
+      &:last-child {
+        padding-left: 2rem;
+      }
+
+      &:not(:first-child, :last-child) {
+        padding-inline: 2rem;
+      }
+    }
+
+    @media (width < 768px) {
+      &:first-child {
+        padding-right: 0;
+      }
+
+      &:last-child {
+        padding-left: 0;
+      }
+
+      &:not(:first-child, :last-child) {
+        padding-inline: 0;
+      }
     }
   }
 }

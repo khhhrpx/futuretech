@@ -6,19 +6,13 @@
   &__container {
     display: grid;
     grid-template-columns: 59.1401% minmax(0, 1fr);
+    width: min(134rem, 100%);
+    margin-inline: auto;
+    padding-inline: 3rem;
 
     @media (width < 1024px) {
       grid-template-columns: 1fr;
-    }
-  }
-
-  &__col {
-    @media (width < 1024px) {
-      margin-inline: -3rem;
-    }
-
-    @media (width < 768px) {
-      margin-inline: -1.6rem;
+      padding-inline: 0;
     }
   }
 
@@ -65,7 +59,7 @@
 
   &__suptitle {
     font-size: clamp(1.8rem, calc(2vw + 1rem), 2.2rem);
-    color: v.$grey-dark-100;
+    color: v.$grey-dark-400;
     margin-bottom: 0.6rem;
   }
 
@@ -204,6 +198,14 @@
     @media (width < 768px) {
       padding-block: 3rem;
       --padding-inline: 0;
+    }
+  }
+
+  &__content,
+  &__grid {
+    @media (orientation: landscape) {
+      padding-left: max(1.6rem, env(safe-area-inset-left, 0rem));
+      padding-right: max(1.6rem, env(safe-area-inset-right, 0rem));
     }
   }
 }

@@ -17,6 +17,11 @@
     @media (width < 768px) {
       padding-inline: 1.6rem;
     }
+
+    @media (orientation: landscape) {
+      padding-left: max(1.6rem, env(safe-area-inset-left, 0rem));
+      padding-right: max(1.6rem, env(safe-area-inset-right, 0rem));
+    }
   }
 
   &__item {
@@ -33,7 +38,7 @@
     border-radius: 0.7rem;
     padding: 2rem 2.4rem;
     background-color: v.$grey-dark-800;
-    color: v.$grey-light-700;
+    color: v.$grey-light-400;
     white-space: nowrap;
 
     @media (hover: hover) {
