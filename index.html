@@ -186,7 +186,7 @@
                 the heart of AI.
               </p>
             </div>
-            <div class="hero__grid separator separator--vertical">
+            <div class="hero__grid">
               <div class="hero__cell">
                 <article class="stat-card">
                   <h2 class="stat-card__title">300<span>+</span></h2>
@@ -226,11 +226,11 @@
             </div>
             <div class="hero__head">
               <h2 class="hero__info-title">Explore 1000+ resources</h2>
-              <p class="hero__info-text">
+              <p class="main-text">
                 Over 1,000 articles on emerging tech trends and breakthroughs.
               </p>
             </div>
-            <a href="#!" class="main-link hero__link">
+            <a href="#!" class="main-link">
               <span>Explore Resources</span>
               <svg class="icon icon--20">
                 <use href="#arrow-top"></use>
@@ -317,7 +317,7 @@
               <img src="./src/icons/future.svg" alt="" />
               <div class="about__text-group">
                 <h2 class="about__title">Future Technology Blog</h2>
-                <p class="about__text">
+                <p class="main-text">
                   Stay informed with our blog section dedicated to future
                   technology.
                 </p>
@@ -361,7 +361,6 @@
                   </p>
                 </div>
               </div>
-              <div class="about__cell"></div>
             </div>
           </div>
         </div>
@@ -375,7 +374,7 @@
               <img src="./src/icons/research.svg" alt="" />
               <div class="about__text-group">
                 <h2 class="about__title">Research Insights Blogs</h2>
-                <p class="about__text">
+                <p class="main-text">
                   Dive deep into future technology concepts with our research
                   section.
                 </p>
@@ -416,7 +415,6 @@
                   </p>
                 </div>
               </div>
-              <div class="about__cell"></div>
             </div>
           </div>
         </div>
@@ -444,27 +442,35 @@
         </div>
       </div>
       <div class="blog__wrapper">
-        <div class="main-container">
-          <div class="tab-bar">
-            <button type="button" class="tab-bar__btn tab-bar__btn--active">
-              <span>All</span>
-            </button>
-            <button type="button" class="tab-bar__btn">
-              <span>Quantum Computing</span>
-            </button>
-            <button type="button" class="tab-bar__btn">
-              <span>AI Ethics</span>
-            </button>
-            <button type="button" class="tab-bar__btn">
-              <span>Space Exploration</span>
-            </button>
-            <button type="button" class="tab-bar__btn">
-              <span>Biotechnology</span>
-            </button>
-            <button type="button" class="tab-bar__btn">
-              <span>Renewable Energy</span>
-            </button>
-          </div>
+        <div class="tab-bar">
+          <ul class="tab-bar__list">
+            <li class="tab-bar__item">
+              <button type="button" class="tab-bar__btn tab-bar__btn--active">
+                All
+              </button>
+            </li>
+            <li class="tab-bar__item">
+              <button type="button" class="tab-bar__btn">
+                Quantum Computing
+              </button>
+            </li>
+            <li class="tab-bar__item">
+              <button type="button" class="tab-bar__btn">AI Ethics</button>
+            </li>
+            <li class="tab-bar__item">
+              <button type="button" class="tab-bar__btn">
+                Space Exploration
+              </button>
+            </li>
+            <li class="tab-bar__item">
+              <button type="button" class="tab-bar__btn">Biotechnology</button>
+            </li>
+            <li class="tab-bar__item">
+              <button type="button" class="tab-bar__btn">
+                Renewable Energy
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="blog__wrapper">
@@ -476,7 +482,7 @@
               </div>
               <div class="author-card__group">
                 <p class="author-card__name">John Techson</p>
-                <p class="author-card__text">Quantum Computing</p>
+                <p class="main-text">Quantum Computing</p>
               </div>
             </div>
           </div>
@@ -489,26 +495,26 @@
                   Explore the revolution in quantum computing, its applications,
                   and its potential impact on various industries.
                 </p>
-                <div class="post__actions">
-                  <button type="button" class="post__btn post__btn--red">
-                    <svg class="icon icon--20">
-                      <use href="#like"></use>
-                    </svg>
-                    <span>24.5k</span>
-                  </button>
-                  <button type="button" class="post__btn">
-                    <svg class="icon icon--20">
-                      <use href="#comment"></use>
-                    </svg>
-                    <span>50</span>
-                  </button>
-                  <button type="button" class="post__btn">
-                    <svg class="icon icon--20">
-                      <use href="#share"></use>
-                    </svg>
-                    <span>20</span>
-                  </button>
-                </div>
+              </div>
+              <div class="post__actions">
+                <button type="button" class="post__btn post__btn--red">
+                  <svg class="icon icon--20">
+                    <use href="#like"></use>
+                  </svg>
+                  <span>24.5k</span>
+                </button>
+                <button type="button" class="post__btn">
+                  <svg class="icon icon--20">
+                    <use href="#comment"></use>
+                  </svg>
+                  <span>50</span>
+                </button>
+                <button type="button" class="post__btn">
+                  <svg class="icon icon--20">
+                    <use href="#share"></use>
+                  </svg>
+                  <span>20</span>
+                </button>
               </div>
             </div>
           </div>
@@ -531,7 +537,7 @@
               </div>
               <div class="author-card__group">
                 <p class="author-card__name">Sarah Ethicist</p>
-                <p class="author-card__text">AI Ethics</p>
+                <p class="main-text">AI Ethics</p>
               </div>
             </div>
           </div>
@@ -544,26 +550,26 @@
                   A deep dive into ethical challenges posed by AI, including
                   bias, privacy, and transparency.
                 </p>
-                <div class="post__actions">
-                  <button type="button" class="post__btn post__btn--red">
-                    <svg class="icon icon--20">
-                      <use href="#like"></use>
-                    </svg>
-                    <span>32k</span>
-                  </button>
-                  <button type="button" class="post__btn">
-                    <svg class="icon icon--20">
-                      <use href="#comment"></use>
-                    </svg>
-                    <span>72</span>
-                  </button>
-                  <button type="button" class="post__btn">
-                    <svg class="icon icon--20">
-                      <use href="#share"></use>
-                    </svg>
-                    <span>18</span>
-                  </button>
-                </div>
+              </div>
+              <div class="post__actions">
+                <button type="button" class="post__btn post__btn--red">
+                  <svg class="icon icon--20">
+                    <use href="#like"></use>
+                  </svg>
+                  <span>32k</span>
+                </button>
+                <button type="button" class="post__btn">
+                  <svg class="icon icon--20">
+                    <use href="#comment"></use>
+                  </svg>
+                  <span>72</span>
+                </button>
+                <button type="button" class="post__btn">
+                  <svg class="icon icon--20">
+                    <use href="#share"></use>
+                  </svg>
+                  <span>18</span>
+                </button>
               </div>
             </div>
           </div>
@@ -586,7 +592,7 @@
               </div>
               <div class="author-card__group">
                 <p class="author-card__name">Astronomer X</p>
-                <p class="author-card__text">Space Exploration</p>
+                <p class="main-text">Space Exploration</p>
               </div>
             </div>
           </div>
@@ -599,26 +605,26 @@
                   Exploring the technical and logistical challenges of human
                   colonization on Mars.
                 </p>
-                <div class="post__actions">
-                  <button type="button" class="post__btn post__btn--red">
-                    <svg class="icon icon--20">
-                      <use href="#like"></use>
-                    </svg>
-                    <span>20k</span>
-                  </button>
-                  <button type="button" class="post__btn">
-                    <svg class="icon icon--20">
-                      <use href="#comment"></use>
-                    </svg>
-                    <span>31</span>
-                  </button>
-                  <button type="button" class="post__btn">
-                    <svg class="icon icon--20">
-                      <use href="#share"></use>
-                    </svg>
-                    <span>12</span>
-                  </button>
-                </div>
+              </div>
+              <div class="post__actions">
+                <button type="button" class="post__btn post__btn--red">
+                  <svg class="icon icon--20">
+                    <use href="#like"></use>
+                  </svg>
+                  <span>20k</span>
+                </button>
+                <button type="button" class="post__btn">
+                  <svg class="icon icon--20">
+                    <use href="#comment"></use>
+                  </svg>
+                  <span>31</span>
+                </button>
+                <button type="button" class="post__btn">
+                  <svg class="icon icon--20">
+                    <use href="#share"></use>
+                  </svg>
+                  <span>12</span>
+                </button>
               </div>
             </div>
           </div>
@@ -656,86 +662,108 @@
       </div>
       <div class="resources__wrapper">
         <div class="main-container resources__container">
-          <div class="resources__col resources__col--center">
-            <div class="resources__intro">
-              <img src="./src/icons/ebooks.svg" alt="" class="resources__img" />
-              <div class="resources__text-group">
-                <h2 class="resources__title">Ebooks</h2>
-                <p class="main-text">
-                  Explore our collection of ebooks covering a wide spectrum of
-                  future technology topics.
-                </p>
-              </div>
-              <a href="#!" class="main-link resources__link">
-                <span>Download Ebooks Now</span>
-                <svg class="icon icon--20">
-                  <use href="#arrow-top"></use>
-                </svg>
-              </a>
-              <div class="resources__info framed-box">
-                <div class="resources__info-group">
-                  <p class="resources__info-text">Downloaded By</p>
-                  <h3 class="resources__info-title">10k + Users</h3>
+          <div class="resources__col">
+            <div class="resources__inner">
+              <div class="resources__info">
+                <img
+                  src="./src/icons/ebooks.svg"
+                  alt=""
+                  class="resources__img"
+                />
+                <div class="resources__group">
+                  <h2 class="resources__title resources__title--large">
+                    Ebooks
+                  </h2>
+                  <p class="main-text">
+                    Explore our collection of ebooks covering a wide spectrum of
+                    future technology topics.
+                  </p>
+                  <a href="#!" class="main-link resources__link">
+                    Download Ebooks Now
+                    <svg class="icon icon--20">
+                      <use href="#arrow-top"></use>
+                    </svg>
+                  </a>
                 </div>
-                <div
-                  class="user-group user-group--compact resources__user-group"
-                >
-                  <a href="#!" class="user-group__user">
-                    <img src="./src/img/ava01.webp" alt="" />
-                  </a>
-                  <a href="#!" class="user-group__user">
-                    <img src="./src/img/ava02.webp" alt="" />
-                  </a>
-                  <a href="#!" class="user-group__user">
-                    <img src="./src/img/ava03.webp" alt="" />
-                  </a>
-                  <a href="#!" class="user-group__user">
-                    <img src="./src/img/ava04.webp" alt="" />
-                  </a>
+                <div class="resources__card resources__card--fit-content">
+                  <div class="resources__card-group">
+                    <p class="main-text">Downloaded By</p>
+                    <h3 class="resources__title">10k + Users</h3>
+                  </div>
+                  <div class="user-group user-group--compact">
+                    <a href="#!" class="user-group__user">
+                      <img src="./src/img/ava01.webp" alt="" />
+                    </a>
+                    <a href="#!" class="user-group__user">
+                      <img src="./src/img/ava02.webp" alt="" />
+                    </a>
+                    <a href="#!" class="user-group__user">
+                      <img src="./src/img/ava03.webp" alt="" />
+                    </a>
+                    <a href="#!" class="user-group__user">
+                      <img src="./src/img/ava04.webp" alt="" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="resources__col">
-            <div class="resources__content">
-              <div class="resources__header">
-                <h2 class="resources__content-title">Variety of Topics</h2>
+            <div class="resources__grid">
+              <div class="resources__cell resources__cell--center">
+                <h2 class="resources__title">Variety of Topics</h2>
+              </div>
+              <div class="resources__cell">
                 <p class="main-text">
                   Topics include AI in education (25%), renewable energy (20%),
                   healthcare (15%), space exploration (25%), and biotechnology
                   (15%).
                 </p>
               </div>
-              <div class="resources__media">
-                <img src="./src/img/image01.webp" alt="" />
+              <div class="resources__cell">
+                <img
+                  src="./src/img/image01.webp"
+                  alt=""
+                  class="resources__media"
+                />
               </div>
-              <div class="resources__bottom">
-                <div class="resources__text-box framed-box framed-box--large">
-                  <p class="main-text">Total Ebooks</p>
-                  <h3 class="resources__bottom-title">Over 100 ebooks</h3>
+              <div class="resources__cell">
+                <div class="resources__card">
+                  <div class="resources__card-group">
+                    <p class="main-text">Total Ebooks</p>
+                    <h3 class="resources__title resources__title--small">
+                      Over 100 ebooks
+                    </h3>
+                  </div>
                 </div>
-                <div
-                  class="resources__bottom-group framed-box framed-box--large"
-                >
-                  <div class="resources__text-box">
+              </div>
+              <div class="resources__cell">
+                <div class="resources__card">
+                  <div class="resources__card-group">
                     <p class="main-text">Download Formats</p>
-                    <h3 class="resources__bottom-title">
+                    <h3 class="resources__title resources__title--small">
                       PDF format for access.
                     </h3>
                   </div>
-                  <button type="button" class="resources__btn">
-                    <span>Preview</span>
+                  <a href="#!" class="main-link">
+                    Preview
                     <svg class="icon icon--20">
                       <use href="#eye"></use>
                     </svg>
-                  </button>
+                  </a>
                 </div>
-                <div class="resources__text-box framed-box framed-box--large">
-                  <p class="main-text">Average Author Expertise</p>
-                  <h3 class="resources__bottom-title">
-                    Ebooks are authored by renowned experts with an average of
-                    15 years of experience
-                  </h3>
+              </div>
+              <div class="resources__cell">
+                <div class="resources__card">
+                  <div class="resources__card-group">
+                    <p class="main-text">Average Author Expertises</p>
+                    <h3
+                      class="resources__title resources__title--small resources__title--medium"
+                    >
+                      Ebooks are authored by renowned experts with an average of
+                      15 years of experience
+                    </h3>
+                  </div>
                 </div>
               </div>
             </div>
@@ -744,90 +772,108 @@
       </div>
       <div class="resources__wrapper">
         <div class="main-container resources__container">
-          <div class="resources__col resources__col--center">
-            <div class="resources__intro">
-              <img
-                src="./src/icons/whitepapers.svg"
-                alt=""
-                class="resources__img"
-              />
-              <div class="resources__text-group">
-                <h2 class="resources__title">Whitepapers</h2>
-                <p class="main-text">
-                  Dive into comprehensive reports and analyses with our
-                  collection of whitepapers.
-                </p>
-              </div>
-              <a href="#!" class="main-link resources__link">
-                <span>Download Whitepapers Now</span>
-                <svg class="icon icon--20">
-                  <use href="#arrow-top"></use>
-                </svg>
-              </a>
-              <div class="resources__info framed-box">
-                <div class="resources__info-group">
-                  <p class="resources__info-text">Downloaded By</p>
-                  <h3 class="resources__info-title">10k + Users</h3>
+          <div class="resources__col">
+            <div class="resources__inner">
+              <div class="resources__info">
+                <img
+                  src="./src/icons/whitepapers.svg"
+                  alt=""
+                  class="resources__img"
+                />
+                <div class="resources__group">
+                  <h2 class="resources__title resources__title--large">
+                    Whitepapers
+                  </h2>
+                  <p class="main-text">
+                    Dive into comprehensive reports and analyses with our
+                    collection of whitepapers.
+                  </p>
+                  <a href="#!" class="main-link resources__link">
+                    Download Whitepapers Now
+                    <svg class="icon icon--20">
+                      <use href="#arrow-top"></use>
+                    </svg>
+                  </a>
                 </div>
-                <div
-                  class="user-group user-group--compact resources__user-group"
-                >
-                  <a href="#!" class="user-group__user">
-                    <img src="./src/img/ava05.webp" alt="" />
-                  </a>
-                  <a href="#!" class="user-group__user">
-                    <img src="./src/img/ava06.webp" alt="" />
-                  </a>
-                  <a href="#!" class="user-group__user">
-                    <img src="./src/img/ava07.webp" alt="" />
-                  </a>
-                  <a href="#!" class="user-group__user">
-                    <img src="./src/img/ava08.webp" alt="" />
-                  </a>
+                <div class="resources__card resources__card--fit-content">
+                  <div class="resources__card-group">
+                    <p class="main-text">Downloaded By</p>
+                    <h3 class="resources__title">10k + Users</h3>
+                  </div>
+                  <div class="user-group user-group--compact">
+                    <a href="#!" class="user-group__user">
+                      <img src="./src/img/ava05.webp" alt="" />
+                    </a>
+                    <a href="#!" class="user-group__user">
+                      <img src="./src/img/ava06.webp" alt="" />
+                    </a>
+                    <a href="#!" class="user-group__user">
+                      <img src="./src/img/ava07.webp" alt="" />
+                    </a>
+                    <a href="#!" class="user-group__user">
+                      <img src="./src/img/ava08.webp" alt="" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="resources__col">
-            <div class="resources__content">
-              <div class="resources__header">
-                <h2 class="resources__content-title">Topics Coverage</h2>
+            <div class="resources__grid">
+              <div class="resources__cell resources__cell--center">
+                <h2 class="resources__title">Topics Coverage</h2>
+              </div>
+              <div class="resources__cell">
                 <p class="main-text">
                   Whitepapers cover quantum computing (20%), AI ethics (15%),
                   space mining prospects (20%), AI in healthcare (15%), and
                   renewable energy strategies (30%).
                 </p>
               </div>
-              <div class="resources__media">
-                <img src="./src/img/image02.webp" alt="" />
+              <div class="resources__cell">
+                <img
+                  src="./src/img/image02.webp"
+                  alt=""
+                  class="resources__media"
+                />
               </div>
-              <div class="resources__bottom">
-                <div class="resources__text-box framed-box framed-box--large">
-                  <p class="main-text">Total Whitepapers</p>
-                  <h3 class="resources__bottom-title">Over 50 whitepapers</h3>
+              <div class="resources__cell">
+                <div class="resources__card">
+                  <div class="resources__card-group">
+                    <p class="main-text">Total Whitepapers</p>
+                    <h3 class="resources__title resources__title--small">
+                      Over 50 whitepapers
+                    </h3>
+                  </div>
                 </div>
-                <div
-                  class="resources__bottom-group framed-box framed-box--large"
-                >
-                  <div class="resources__text-box">
+              </div>
+              <div class="resources__cell">
+                <div class="resources__card">
+                  <div class="resources__card-group">
                     <p class="main-text">Download Formats</p>
-                    <h3 class="resources__bottom-title">
+                    <h3 class="resources__title resources__title--small">
                       PDF format for access.
                     </h3>
                   </div>
-                  <button type="button" class="resources__btn">
-                    <span>Preview</span>
+                  <a href="#!" class="main-link">
+                    Preview
                     <svg class="icon icon--20">
                       <use href="#eye"></use>
                     </svg>
-                  </button>
+                  </a>
                 </div>
-                <div class="resources__text-box framed-box framed-box--large">
-                  <p class="main-text">Average Author Expertise</p>
-                  <h3 class="resources__bottom-title">
-                    Whitepapers are authored by subject matter experts with an
-                    average of 20 years of experience.
-                  </h3>
+              </div>
+              <div class="resources__cell">
+                <div class="resources__card">
+                  <div class="resources__card-group">
+                    <p class="main-text">Average Author Expertises</p>
+                    <h3
+                      class="resources__title resources__title--small resources__title--medium"
+                    >
+                      Whitepapers are authored by subject matter experts with an
+                      average of 20 years of experience.
+                    </h3>
+                  </div>
                 </div>
               </div>
             </div>
@@ -866,7 +912,7 @@
                 </div>
                 <div class="author-card__group">
                   <p class="author-card__name">Sarah Thompson</p>
-                  <p class="author-card__text">San Francisco, USA</p>
+                  <p class="main-text">San Francisco, USA</p>
                 </div>
               </div>
               <div class="review-card__content">
@@ -903,7 +949,7 @@
                 </div>
                 <div class="author-card__group">
                   <p class="author-card__name">Raj Patel</p>
-                  <p class="author-card__text">Mumbai, India</p>
+                  <p class="main-text">Mumbai, India</p>
                 </div>
               </div>
               <div class="review-card__content">
@@ -939,7 +985,7 @@
                 </div>
                 <div class="author-card__group">
                   <p class="author-card__name">Emily Adams</p>
-                  <p class="author-card__text">London, UK</p>
+                  <p class="main-text">London, UK</p>
                 </div>
               </div>
               <div class="review-card__content">
@@ -982,7 +1028,7 @@
                 </div>
                 <div class="author-card__group">
                   <p class="author-card__name">Alan Jackson</p>
-                  <p class="author-card__text">Houston, USA</p>
+                  <p class="main-text">Houston, USA</p>
                 </div>
               </div>
               <div class="review-card__content">
@@ -1018,7 +1064,7 @@
                 </div>
                 <div class="author-card__group">
                   <p class="author-card__name">Jessica Miller</p>
-                  <p class="author-card__text">Boston, USA</p>
+                  <p class="main-text">Boston, USA</p>
                 </div>
               </div>
               <div class="review-card__content">
@@ -1055,7 +1101,7 @@
                 </div>
                 <div class="author-card__group">
                   <p class="author-card__name">Diego Lopez</p>
-                  <p class="author-card__text">Barcelona, Spain</p>
+                  <p class="main-text">Barcelona, Spain</p>
                 </div>
               </div>
               <div class="review-card__content">
@@ -1086,7 +1132,7 @@
         </div>
       </div>
     </section>
-    <section class="community">
+    <!-- <section class="community">
       <div class="main-container community__container">
         <div class="community__header">
           <div class="community__col community__col--media">
@@ -1276,7 +1322,7 @@
           <p class="footer__text">© 2024 FutureTech. All rights reserved.</p>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <script src="./src/main.js" type="module"></script>
   </body>
 </html>

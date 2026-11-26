@@ -16,6 +16,10 @@
     @media (width < 1024px) {
       margin-inline: -3rem;
     }
+
+    @media (width < 768px) {
+      margin-inline: -1.6rem;
+    }
   }
 
   &__wrapper {
@@ -27,6 +31,10 @@
     @media (width < 1024px) {
       row-gap: 5rem;
       border: none;
+    }
+
+    @media (width < 768px) {
+      row-gap: 3rem;
     }
   }
 
@@ -40,6 +48,11 @@
     @media (width < 1024px) {
       padding-top: 5rem;
       padding-inline: 3rem;
+    }
+
+    @media (width < 768px) {
+      padding-top: 4rem;
+      padding-inline: 1.6rem;
     }
   }
 
@@ -77,25 +90,38 @@
       z-index: 1;
     }
 
+    & > *:not(:last-child) {
+      box-shadow: 0.1rem 0 0 0 v.$grey-dark-600;
+    }
+
     @media (width < 1024px) {
       padding-inline: 3rem;
+    }
+
+    @media (width < 1024px) {
+      padding-inline: 1.6rem;
     }
   }
 
   &__cell {
+    --padding: 4rem;
     padding-block: 3rem;
     flex: 1 0 0;
 
     &:first-child {
-      padding-right: 4rem;
+      padding-right: var(--padding);
     }
 
     &:last-child {
-      padding-left: 4rem;
+      padding-left: var(--padding);
     }
 
     &:not(:first-child, :last-child) {
-      padding-inline: 4rem;
+      padding-inline: var(--padding);
+    }
+
+    @media (width < 768px) {
+      --padding: 2rem;
     }
   }
 
@@ -120,6 +146,14 @@
       opacity: 0.3;
       z-index: -1;
     }
+
+    @media (width < 1024px) {
+      padding-top: 10rem;
+    }
+
+    @media (width < 768px) {
+      padding: 4rem;
+    }
   }
 
   &__head {
@@ -129,13 +163,8 @@
   }
 
   &__info-title {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, calc(1vw + 1rem), 2rem);
     font-weight: 500;
-  }
-
-  &__info-text {
-    color: v.$grey-light-700;
-    font-size: 1.6rem;
   }
 
   &__inner {
@@ -144,27 +173,37 @@
 
   &__cards {
     display: flex;
+
+    @media (width < 768px) {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+    }
   }
 
   &__item {
-    --padding: 5rem;
+    --padding-inline: 5rem;
     flex: 1 0 0;
     padding-block: 4rem;
 
     &:first-child {
-      padding-right: var(--padding);
+      padding-right: var(--padding-inline);
     }
 
     &:last-child {
-      padding-left: var(--padding);
+      padding-left: var(--padding-inline);
     }
 
     &:not(:first-child, :last-child) {
-      padding-inline: var(--padding);
+      padding-inline: var(--padding-inline);
     }
 
     @media (width < 1024px) {
-      --padding: 3rem;
+      --padding-inline: 3rem;
+    }
+
+    @media (width < 768px) {
+      padding-block: 3rem;
+      --padding-inline: 0;
     }
   }
 }

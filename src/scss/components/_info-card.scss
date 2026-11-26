@@ -10,6 +10,10 @@
     display: block;
     width: 4rem;
     object-fit: contain;
+
+    @media (width < 768px) {
+      width: 3rem;
+    }
   }
 
   &__content {
@@ -26,7 +30,7 @@
   }
 
   &__title {
-    font-size: 1.8rem;
+    font-size: clamp(1.6rem, calc(1vw + 1rem), 1.8rem);
     font-weight: 500;
   }
 

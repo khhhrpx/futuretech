@@ -6,6 +6,10 @@
   &__container {
     display: grid;
     grid-template-columns: 32.2656% minmax(0, 1fr);
+
+    @media (width < 768px) {
+      grid-template-columns: minmax(0, 1fr);
+    }
   }
 
   &__intro {
@@ -20,16 +24,28 @@
       aspect-ratio: 1;
       object-fit: contain;
     }
+
+    @media (width < 768px) {
+      row-gap: 2rem;
+
+      img {
+        width: 5rem;
+      }
+    }
   }
 
   &__text-group {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
+
+    @media (width < 768px) {
+      row-gap: 0.4rem;
+    }
   }
 
   &__title {
-    font-size: 3rem;
+    font-size: clamp(2.4rem, calc(1vw + 1rem), 3rem);
     font-weight: 600;
     font-family: v.$font-secondary;
   }
@@ -43,22 +59,33 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
+
+    @media (width < 768px) {
+      grid-template-columns: 1fr;
+      padding-inline: 1.6rem;
+      gap: 1rem;
+    }
   }
 
   &__col {
-    --padding: 6rem;
-    padding-block: var(--padding);
+    --padding-inline: 6rem;
+    padding-block: 6rem;
 
     &:first-child {
-      padding-right: var(--padding);
+      padding-right: var(--padding-inline);
     }
 
     &:last-child {
-      padding-left: var(--padding);
+      padding-left: var(--padding-inline);
     }
 
     @media (width < 1024px) {
-      --padding: 3rem;
+      --padding-inline: 3rem;
+      padding-block: 3rem;
+    }
+
+    @media (width < 768px) {
+      --padding-inline: 0;
     }
   }
 
@@ -70,10 +97,15 @@
     padding: 3rem;
     background-color: v.$grey-dark-700;
     height: 100%;
+
+    @media (width < 768px) {
+      padding: 2.4rem;
+      row-gap: 0.4rem;
+    }
   }
 
   &__card-title {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, calc(1vw + 1rem), 2rem);
     font-weight: 500;
   }
 

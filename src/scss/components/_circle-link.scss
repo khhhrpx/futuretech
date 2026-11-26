@@ -21,4 +21,8 @@
       background-color: v.$grey-dark-800;
     }
   }
+
+  @media (width < 768px) {
+    width: 4rem;
+  }
 }

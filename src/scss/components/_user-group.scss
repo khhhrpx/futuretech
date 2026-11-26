@@ -13,6 +13,11 @@
   border-radius: 3.3rem;
   isolation: isolate;
 
+  @media (width < 768px) {
+    --ava-size: 4rem;
+    height: 5.6rem;
+  }
+
   &__user {
     @extend %hover-shadow;
     width: var(--ava-size);

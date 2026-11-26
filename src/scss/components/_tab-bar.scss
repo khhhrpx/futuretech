@@ -1,13 +1,31 @@
 @use "../utils/variables" as v;
-@use "../utils/placeholders";
 
 .tab-bar {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 1.4rem;
+  overflow-x: auto;
   padding-block: 4rem;
+  scrollbar-width: none;
+
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(max-content, 1fr);
+    width: fit-content;
+    column-gap: 1.4rem;
+    margin-inline: auto;
+    padding-inline: 3rem;
+
+    @media (width < 768px) {
+      padding-inline: 1.6rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+  }
 
   &__btn {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,10 +34,7 @@
     padding: 2rem 2.4rem;
     background-color: v.$grey-dark-800;
     color: v.$grey-light-700;
-
-    span {
-      @extend %text-ellipsis;
-    }
+    white-space: nowrap;
 
     @media (hover: hover) {
       cursor: pointer;

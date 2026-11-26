@@ -10,6 +10,10 @@
   &--vertical {
     & > *:not(:last-child) {
       box-shadow: 0.1rem 0 0 0 v.$grey-dark-600;
+
+      @media (width < 768px) {
+        box-shadow: 0 0.1rem 0 0 v.$grey-dark-600;
+      }
     }
   }
 }

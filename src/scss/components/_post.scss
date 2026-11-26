@@ -6,7 +6,7 @@
   row-gap: 2.4rem;
 
   &__date {
-    font-size: 1.8rem;
+    font-size: clamp(1.6rem, calc(1vw + 1rem), 1.8rem);
     color: v.$grey-light-700;
     font-weight: 600;
   }
@@ -18,7 +18,7 @@
   }
 
   &__title {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, calc(1vw + 1rem), 2.2rem);
     font-weight: 600;
   }
 
