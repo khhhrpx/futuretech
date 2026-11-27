@@ -44,7 +44,7 @@
     @media (hover: hover) {
       cursor: pointer;
 
-      &:hover {
+      &:hover:not(&--active) {
         background-color: v.$accent-color;
         color: v.$grey-dark-800;
       }
@@ -53,8 +53,6 @@
     &--active {
       color: v.$white;
       background-color: v.$grey-dark-700;
-      cursor: default;
-      pointer-events: none;
     }
   }
 }
